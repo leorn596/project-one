@@ -87,12 +87,13 @@ public class DataType {
     // String shelf = furnace.next();
     //通过shelf可以访问到String对象的内容[商品]
     // System.out.println(shelf);
+    // furnace.close();
     /*------------------------------------*/
     // Random randomTool = new Random();
     //nextFloat()   只生产(0,1]之间的浮点数 nextDouble() 同理
     // Float randomNum = randomTool.nextFloat();
     // System.out.println(randomNum);
-    
+
 }
     }
 }

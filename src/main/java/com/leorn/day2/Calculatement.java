@@ -13,6 +13,7 @@ public class Calculatement {
         // System.out.println(num1 - num2);
         // System.out.println(num1 * num2);
         // System.out.println(num1 / num2);
-        System.out.println(num1 % num2);
+        // System.out.println(num1 % num2);
+        scannerTools.close();
     }
 }
