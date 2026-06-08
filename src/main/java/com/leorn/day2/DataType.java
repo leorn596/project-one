@@ -1,4 +1,8 @@
 package com.leorn.day2;
+
+import java.util.Random;
+import java.util.Scanner;
+
 //缩进用四个空格
 //大括号不换行，仅大括号行与上行缩进保持四个空格
 //类名大驼峰，变量小驼峰--class HelloWorld，int helloWorld
@@ -63,6 +67,31 @@ public class DataType {
 }
 //引用类型(Reference)
 {
+    //我会用String制造两个对象,输出对象来实现day1的HelloWorld
+    // String word1 ="Hello";
+    // String word2 ="World";
+    // System.out.println(word1 + " " + word2);
+    // 比较方法与比较值的使用
+    // String word1 = "Hello";
+    // String word2 = word1;
+    // word1 = "World";
+    // System.out.println(word1.equals("Hello"));
+    // System.out.println(word1 == "World");
+    // System.out.println(word2 == "Hello");
+    // System.out.println(word2.equals("World"));
+    // System.out.println(word1.equals(word2));
+    // System.out.println(word1 + " " + word2 + "!");
+    //创建Scanner对象[熔炉],它连通着材料管道[标准输入流]
+    // Scanner furnace =  new Scanner(System.in);
+    //[熔炉]调用next方法获取originByte[原料],生产String对象[商品]([商品]被放在shelf[货架])
+    // String shelf = furnace.next();
+    //通过shelf可以访问到String对象的内容[商品]
+    // System.out.println(shelf);
+    /*------------------------------------*/
+    // Random randomTool = new Random();
+    //nextFloat()   只生产(0,1]之间的浮点数 nextDouble() 同理
+    // Float randomNum = randomTool.nextFloat();
+    // System.out.println(randomNum);
     
 }
     }
