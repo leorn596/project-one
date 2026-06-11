@@ -1,5 +1,7 @@
 package com.leorn.day2;
 
+import java.util.InputMismatchException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class FlowControl {
@@ -68,7 +70,76 @@ public class FlowControl {
         }
         //循环结构
         {
-            //
+            //for
+            {
+                // Scanner scannerTools = new Scanner(System.in);
+                // System.out.println("please input a int number as row number");
+                // int r = scannerTools.nextInt();
+                // System.out.println("please input a int number as column number");
+                // int c = scannerTools.nextInt();
+                // scannerTools.close();
+                // for(int i = 1;i <= r;i++){
+                //     for(int j = 1;j <= c;j++){
+                //         //实现上三角打印,可以用if限制条件割去下三角
+                //         if(i <= j){
+                //             System.out.print(i +"*"+ j +"="+ (i * j) + "\t");
+                //         }
+                //     }
+                //     System.out.println();
+                // }
+            }
+            //while
+            //原
+            {
+                // Random r = new Random();
+                // int randomNum = r.nextInt(100)+1;
+                // Scanner scanner = new Scanner(System.in);
+                // System.out.println("Game:GuessNumber");
+                // System.out.println("Rule:input a int number between 1 to 100,just so");
+                // while (true) {
+                //     int guessNum = scanner.nextInt();
+                //     if(guessNum < randomNum){
+                //         System.out.println("It's smaller,try again");
+                //         break;
+                //     }else if(guessNum > randomNum){
+                //         System.out.println("It's bigger,try again");
+                //         break;
+                //     }else if(guessNum == randomNum){
+                //         System.out.println("Bingo,you win!");
+                //         System.exit(0);
+                //     }else{
+                //         throw new InvaildInputException("Invaild input type:please input int number between 1 to 100")
+                //     }
+                // }
+                // scanner.close();
+            }
+            //规范后
+            {
+                Random r = new Random();
+                int randomNum = r.nextInt(100)+1;
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Game:GuessNumber");
+                System.out.println("Rule:input a int number between 1 to 100,just so");
+                while (true) {
+                    System.out.println("Start!");
+                    int guessNum = 0;
+                    //如果需要容忍异常,catch的处理要scanner.nextInt();"清空输入",然后输出提示,continue;让while继续循环
+                    try{
+                        guessNum = scanner.nextInt();
+                    }catch(InputMismatchException e){
+                        throw new InvaildInputException("Invaild input type:please input int number between 1 to 100");
+                    }
+                    if(guessNum < randomNum){
+                        System.out.println("It's smaller,try again");
+                    }else if(guessNum > randomNum){
+                        System.out.println("It's bigger,try again");
+                    }else if(guessNum == randomNum){
+                        System.out.println("Bingo,you win!");
+                        break;
+                    }
+                }
+                scanner.close();
+            }
         }
     }
 }
