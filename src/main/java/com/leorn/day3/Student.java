@@ -83,6 +83,11 @@ public class Student {
     }
 
     public String introduce(){
-        return "Name:" + name +" "+ "StudentId:" + id + "\n" + "Gender:" + gender +" "+ "Age:" + age + " " + "Score:" + score;
+        return "Name:" + name +" "+ "Id:" + id + "\n" + "Gender:" + gender +" "+ "Age:" + age + " " + "\n" + "Score:" + score;
     }
+
+    public int compareTo(Student other){
+        return(int)(other.score - this.score);
+    }
+
 }
