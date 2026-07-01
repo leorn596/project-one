@@ -1,6 +1,6 @@
 package com.leorn.day3;
 
-public class Student {
+public class Student implements Comparable<Student>{
     private int id;
     private String name;
     private int age;
@@ -86,8 +86,9 @@ public class Student {
         return "Name:" + name +" "+ "Id:" + id + "\n" + "Gender:" + gender +" "+ "Age:" + age + " " + "\n" + "Score:" + score;
     }
 
-    public int compareTo(Student other){
+    @Override
+    public int compareTo(Student other) {
+        // TODO Auto-generated method stub
         return(int)(other.score - this.score);
     }
-
 }
