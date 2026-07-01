@@ -1,5 +1,6 @@
 package com.leorn.day4;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import com.leorn.day3.Student;
 import com.leorn.day4.CollegeStudent;
@@ -32,5 +33,17 @@ public class SchoolTest {
             }
         }
         System.out.println("best score owner:" + "\n" + top.introduce());
+
+        System.out.println("------------");
+        Collections.sort(studentList);
+        System.out.println("score list:");
+        System.out.println("(ps:list form highest to lowest)");
+        System.out.println("");
+        for(Student s : studentList){
+            System.out.print("id:" + s.getId() + "\t");
+            System.out.print("name:" + s.getName() + "\t");
+            System.out.println("score" + s.getScore() + "\t");
+        }
+        System.out.println("------------");
     }
 }
